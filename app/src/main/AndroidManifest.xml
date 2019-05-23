@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="werpx.cashiery">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera2"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <application
+        android:name="android.support.multidex.MultiDexApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/iconlogo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".Cashiery.MainActivity"
+            android:theme="@style/CustomTheme" />
+        <activity
+            android:name=".Cashiery.Camera_activity"
+            android:theme="@style/CustomTheme" />
+        <activity android:name=".Cashiery.loginactivity" />
+        <activity android:name=".Cashiery.Launcher_activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Cashiery.sales_history" />
+        <activity android:name=".Cashiery.Choose_Store" />
+        <activity android:name=".Cashiery.Storeinfo" />
+        <activity
+            android:name=".Cashiery.MapsActivity"
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".Cashiery.store_details" />
+        <activity android:name=".Cashiery.Setting" />
+
+        <service
+            android:name=".SyncService"
+            android:stopWithTask="true" />
+        <service
+            android:name=".downloadimagesyrvice"
+            android:stopWithTask="true" />
+        <service
+            android:name=".Downloadimageservice"
+            android:exported="false" />
+        <service android:name=".Firebasemsg">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".Cashiery.Aboutus" />
+        <activity android:name=".Cashiery.points" />
+        <activity android:name=".Cashiery.Sales_Screen" />
+        <activity android:name=".Cashiery.pharmormarket" />
+        <activity android:name=".Cashiery.registerphone"></activity>
+    </application>
+
+</manifest>

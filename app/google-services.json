@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "88535511254",
+    "firebase_url": "https://cashiery.firebaseio.com",
+    "project_id": "cashiery",
+    "storage_bucket": "cashiery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88535511254:android:1c220ff363be22a8",
+        "android_client_info": {
+          "package_name": "werpx.cashiery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88535511254-c082vsbrrdtbh66dn5ugftin0697rkq7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "werpx.cashiery",
+            "certificate_hash": "9fca1c0e72ab7b7764f343ad143ce4c562f09273"
+          }
+        },
+        {
+          "client_id": "88535511254-64chrbajf6p733mekclckb6jc70u6phu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "werpx.cashiery",
+            "certificate_hash": "4d4ab2c1067ca712628daa285eab606851ba9277"
+          }
+        },
+        {
+          "client_id": "88535511254-t52q6n9skimhuc7a2q2luk90i7k2mg20.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "werpx.cashiery",
+            "certificate_hash": "5c640a6303b7e36a96c7f182a17da9883aff4f5e"
+          }
+        },
+        {
+          "client_id": "88535511254-2ql5ooeqi5ujdl6fb8k1k1su5vm9pj27.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwov616IJ0wci6xpogJNihquIiINx2-QM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88535511254-2ql5ooeqi5ujdl6fb8k1k1su5vm9pj27.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

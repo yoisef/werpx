@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".Cashiery.store_details">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbardetails"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:contentInsetEnd="0dp"
+            app:contentInsetStart="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="@color/appcolor"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/large"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:text="@string/code"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/large"
+                android:textColor="@color/black"
+                android:id="@+id/storecode"
+                android:text=" number"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    <FrameLayout
+        android:layout_width="100dp"
+        android:id="@+id/updateimgframe"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_height="110dp">
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:id="@+id/imgprog"
+            android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="100dp"
+        android:background="@drawable/squarewhate"
+        android:id="@+id/imgD"
+        android:padding="5dp"
+        android:src="@drawable/ic_shop"
+        android:layout_height="100dp" />
+        <ImageView
+            android:layout_width="30dp"
+            android:src="@drawable/mcamera"
+            android:layout_gravity="bottom|end"
+            android:layout_height="30dp" />
+    </FrameLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/adminedit"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:hint="@string/namV"
+                    android:layout_weight="1.6"
+                    android:id="@+id/edittextadminname"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/done"
+                        android:textSize="@dimen/medium"
+                        android:id="@+id/doneadminname"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:background="@color/black"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+
+                        android:text="@string/cancelcamera"
+                        android:id="@+id/canceladminname"
+                        android:textSize="@dimen/medium"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/relativeadmin"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_alignParentStart="true"
+        android:padding="5dp"
+        android:text="@string/namV"
+        android:id="@+id/nameaD"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="@dimen/medium"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:id="@+id/imgadmin"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="10dp"
+        android:src="@drawable/adjustt"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/storenameedit"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:hint="@string/storenam"
+                    android:layout_weight="1.6"
+                    android:id="@+id/edittextstornam"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/done"
+                        android:textSize="@dimen/medium"
+                        android:id="@+id/donestoree"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+
+                        android:paddingBottom="3dp"
+                        android:background="@color/black"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_margin="5dp"
+                        android:gravity="center"
+
+                        android:text="@string/cancelcamera"
+                        android:id="@+id/cancelstoree"
+                        android:textSize="@dimen/medium"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:id="@+id/relativestore"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="5dp"
+                    android:text="@string/storenam"
+                    android:id="@+id/namesD"
+                    android:gravity="start"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+
+                    android:textSize="@dimen/medium"
+                    android:layout_height="wrap_content" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:id="@+id/imgstore"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:paddingStart="10dp"
+                    android:src="@drawable/adjustt"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/phoneedit"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/pickerdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="8dp"
+                    app:ccpDialog_showTitle="false"
+                    app:ccp_defaultNameCode="EG"
+                    app:ccp_showFlag="true"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_showFullName="false"
+                    app:ccp_showNameCode="false"
+                    />
+                <EditText
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:hint="@string/phonenumber"
+                    android:inputType="phone"
+                    android:layout_weight="1.5"
+                    android:id="@+id/edittextphon"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/done"
+                        android:textSize="@dimen/medium"
+                        android:id="@+id/donephone"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:background="@color/black"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/cancelcamera"
+                        android:id="@+id/cancelphone"
+                        android:textSize="@dimen/medium"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/relativemob"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/phonenumber"
+        android:id="@+id/phoneD"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+
+        android:textSize="@dimen/medium"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:src="@drawable/adjustt"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="10dp"
+        android:id="@+id/imgphone"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/addressedit"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:id="@+id/edittextstoreaddress"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/done"
+                        android:textSize="@dimen/medium"
+                        android:id="@+id/doneaddress"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:background="@color/black"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="@string/cancelcamera"
+                        android:id="@+id/canceladdress"
+                        android:textSize="@dimen/medium"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/openmapup"
+
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:hint="@string/address"
+                    android:textColorHint="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/medium"
+                    android:padding="6dp"
+                    android:id="@+id/storeaddressup"
+                    android:singleLine="true"
+                    android:gravity="start"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="5dp"
+                    android:textColor="@color/black"
+                    android:layout_weight="4"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:id="@+id/openplacepickerup"
+                    android:src="@drawable/mapicon"
+                    android:padding="2dp"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/passedit"
+                android:visibility="gone"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:gravity="start"
+                    android:inputType="textPassword"
+                    android:hint="@string/pass"
+                    android:textAlignment="viewStart"
+                    android:layout_weight="1.5"
+                    android:id="@+id/edittextretailerpass"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+                        android:text="@string/done"
+                        android:textSize="@dimen/medium"
+                        android:id="@+id/donepass"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_gravity="center"
+                        android:paddingTop="3dp"
+                        android:paddingBottom="3dp"
+                        android:background="@color/black"
+                        android:layout_height="match_parent"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_margin="5dp"
+
+                        android:text="@string/cancelcamera"
+                        android:id="@+id/cancelapass"
+                        android:textSize="@dimen/medium"
+                        android:textColor="@color/black"
+                        android:padding="2dp"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
+
+           <RelativeLayout
+    android:layout_width="match_parent"
+    android:id="@+id/relativeass"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:padding="5dp"
+        android:text="@string/newpass"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/passD"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+
+        android:textSize="@dimen/medium"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:paddingStart="10dp"
+        android:id="@+id/imgpass"
+        android:src="@drawable/adjustt"
+        android:layout_height="match_parent" />
+</RelativeLayout>
+
+
+        </FrameLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="20dp"
+            android:textStyle="bold"
+            android:id="@+id/savechangessD"
+            android:text="@string/savechanges"
+            android:textColor="@color/black"
+            android:textSize="@dimen/medium"
+            android:padding="20dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+
+</ScrollView>

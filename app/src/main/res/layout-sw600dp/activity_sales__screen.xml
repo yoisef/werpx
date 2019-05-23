@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:orientation="vertical"
+android:layout_height="match_parent"
+tools:context=".Cashiery.Sales_Screen">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarsalesscreen"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appcolor">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/xlarge"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:text="@string/salescreen"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.Toolbar>
+
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+
+    android:orientation="horizontal"
+    android:layout_weight="1"
+
+    android:layout_height="0dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@color/appcolor"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/appcolor"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/barcodetype"
+                android:layout_width="0dp"
+                android:gravity="start|center"
+                android:textSize="@dimen/small"                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/editbutton2"
+                android:hint="@string/enterbar"
+                android:imeOptions="actionDone"
+                android:padding="5dp"
+                android:singleLine="true" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/editbutton2"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/categoryspin"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginEnd="15dp"
+
+
+                    android:gravity="center"
+                    android:paddingTop="5dp" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/droparrow"
+                    android:padding="8dp"
+                    android:src="@drawable/dropdown" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/swipe_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/prodcts_show_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/appcolor"
+                android:layoutDirection="ltr"
+                app:layoutManager="android.support.v7.widget.GridLayoutManager"
+                app:spanCount="5"></android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="0dp"
+        android:paddingTop="20dp"
+        android:background="@color/appcolor"
+        android:layout_weight="1"
+        android:id="@+id/addedproductsrecycle"
+        android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+
+
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@color/appcolor"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <FrameLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:id="@+id/totalpricec1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:textSize="@dimen/large"
+                android:textStyle="bold"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="20dp"
+
+
+                android:text="0.00"
+                android:textColor="@color/black"
+                android:background="@drawable/gradientgray"
+                android:layout_height="85dp" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="100dp"
+                    android:text="@string/pay"
+                    android:inputType="number"
+                    android:id="@+id/paylayout1"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/large"
+                    android:textStyle="bold"
+
+                    android:background="@drawable/circle"
+                    android:layout_height="100dp" />
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/payprogress1"
+                    android:visibility="gone"
+                    android:layout_height="wrap_content" />
+            </FrameLayout>
+
+
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/downloadlayout"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <com.daimajia.numberprogressbar.NumberProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/numberprogres"
+
+                app:progress_reached_color="#3498DB"
+                app:progress_unreached_color="#cccc"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:id="@+id/downloadcondition"
+                android:text="download images ...."
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

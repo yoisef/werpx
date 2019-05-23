@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/forumlogin"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="5dp"
+
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/logoo"
+            android:id="@+id/img"
+            android:layout_marginLeft="10dp"
+            android:scaleType="centerInside"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txtxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/logotext"
+            android:textColor="@color/black"
+            android:textSize="@dimen/x_small"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginStart="2dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/logcodepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                app:ccpDialog_showTitle="false"
+                app:ccp_defaultNameCode="EG"
+                app:ccp_showFlag="true"
+                app:ccp_showPhoneCode="false"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false"
+                />
+
+            <EditText
+                android:id="@+id/logphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="8dp"
+                android:drawableEnd="@drawable/phone"
+                android:gravity="start"
+                android:hint="@string/phonenum"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                />
+        </LinearLayout>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_margin="2dp"
+            android:layout_height="wrap_content"
+
+            >
+
+            <EditText
+                android:id="@+id/logpass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_lock_outline_black_24dp"
+                android:hint="@string/pass"
+                android:textAlignment="viewStart"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/signinbutton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:text="@string/login"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginTop="20dp"
+                android:textSize="@dimen/medium"
+                android:textStyle="bold"
+                />
+
+
+
+
+        <Button
+            android:id="@+id/retailer_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/button"
+            android:text="@string/subscripe"
+            android:textSize="@dimen/medium"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:paddingStart="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/arabic"
+            android:textStyle="bold"
+            android:id="@+id/arabiclanguage"
+            android:padding="10dp"
+            android:fontFamily="@string/arabic"
+            android:layout_marginEnd="8dp"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/english"
+            android:fontFamily="@string/english"
+            android:textStyle="bold"
+            android:id="@+id/englishlanguage"
+            android:padding="10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+
+</RelativeLayout>

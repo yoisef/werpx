@@ -1,0 +1,211 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/appcolor"
+
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarmaps"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appcolor"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:background="@color/appcolor"
+        android:layout_height="match_parent"
+       >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:background="@color/appcolor"
+            android:layout_height="0dp">
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:hint="@string/storeidV"
+                    android:singleLine="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:drawableEnd="@drawable/ic_search"
+                    android:id="@+id/searchstore"
+                    android:layout_height="wrap_content" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/showstoredetails"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:padding="5dp"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_shop"
+                    android:scaleType="centerCrop"
+                    android:padding="15dp"
+                    android:id="@+id/storeimg"
+                    android:layout_height="100dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/storenam"
+                    android:padding="5dp"
+
+                    android:id="@+id/namstoreS"
+                    android:gravity="center"
+                    android:textSize="@dimen/medium"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:padding="5dp"
+                    android:textSize="@dimen/medium"
+                    android:id="@+id/addressstoreS"
+                    android:hint="@string/address"
+                    android:gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_height="wrap_content" />
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    tools:context=".Cashiery.MapsActivity" />
+
+            </LinearLayout>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_marginTop="15dp"
+                android:id="@+id/Name_retailer"
+                android:textColorHint="@color/darkgray"
+                android:hint="@string/entername"
+                android:singleLine="true"
+                android:gravity="start"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="5dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <com.hbb20.CountryCodePicker
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    app:ccp_defaultNameCode="EG"
+                    app:ccp_showPhoneCode="false"
+                    app:ccp_showFullName="false"
+                    app:ccpDialog_showTitle="false"
+                    app:ccp_showNameCode="false"
+                    app:ccp_showFlag="true"
+                    android:id="@+id/ccpseller"
+                    />
+                <EditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/Phone_retailer"
+                    android:textColorHint="@color/darkgray"
+                    android:inputType="phone"
+                    android:layout_gravity="center"
+                    android:singleLine="true"
+                    android:hint="@string/phonenum"
+                    android:gravity="start"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/Pass_retailer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/pass"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textAlignment="viewStart"
+                android:inputType="textPassword"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:singleLine="true" />
+            <EditText
+                android:id="@+id/repass_retailer"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+                android:hint="@string/retypepass"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="5dp"
+                android:textAlignment="viewStart"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_margin="10dp"
+                    android:id="@+id/registerr"
+                    android:gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/eshtrk"
+                    android:textSize="@dimen/medium"
+                    android:padding="10dp"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button"
+                    android:layout_height="wrap_content" />
+                <ProgressBar
+                    android:id="@+id/prosub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

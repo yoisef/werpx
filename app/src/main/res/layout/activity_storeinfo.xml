@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/appcolor"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarmarketorpharm"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="@color/appcolor"/>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="@color/appcolor"
+
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@color/appcolor"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_above="@+id/addphoto"
+
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="10dp"
+            android:elevation="16dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/storeimg"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_above="@id/addphototxt"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:src="@drawable/ic_shop" />
+
+            <ProgressBar
+                android:id="@+id/proimage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:backgroundTintMode="@color/blue"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/addphototxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/takephoto"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/openmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="13dp"
+
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/openplacepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+
+                android:src="@drawable/mapicon" />
+
+            <TextView
+                android:id="@+id/storeaddress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:focusableInTouchMode="true"
+                android:gravity="start"
+                android:hint="@string/address"
+                android:padding="6dp"
+                android:paddingEnd="5dp"
+                android:paddingStart="10dp"
+                android:singleLine="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+
+
+          >
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/storecodepicker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                app:ccpDialog_showTitle="false"
+                app:ccp_defaultNameCode="EG"
+                app:ccp_showPhoneCode="false"
+                app:ccp_showFlag="true"
+                app:ccp_showFullName="false"
+                app:ccp_showNameCode="false" />
+
+            <EditText
+                android:id="@+id/storephone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="start"
+                android:focusableInTouchMode="true"
+                android:hint="@string/phonenum"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+
+
+        <EditText
+
+            android:id="@+id/storernam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:gravity="start"
+            android:hint="@string/storenam"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+
+        <EditText
+            android:id="@+id/storeadmin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="start"
+            android:hint="@string/entername"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black" />
+
+        <EditText
+            android:id="@+id/storepass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/pass"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:textAlignment="viewStart"
+            android:inputType="textPassword"
+            android:paddingEnd="5dp"
+            android:paddingStart="10dp"
+            android:singleLine="true" />
+        <EditText
+            android:id="@+id/storpassconfirm"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="20dp"
+            android:hint="@string/retypepass"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:paddingEnd="5dp"
+            android:textAlignment="viewStart"
+
+            android:inputType="textPassword"
+            android:paddingStart="10dp"
+            android:singleLine="true"
+
+            />
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/storesubsc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/button"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="@string/eshtrk"
+                android:textColor="@color/black"
+                android:textSize="@dimen/medium" />
+
+            <ProgressBar
+                android:id="@+id/prosub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+    </LinearLayout>
+
+
